@@ -1,55 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<h1>To Do</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
+  <div class="col-md-4"><h1 class="text-center">To Do</h1>
     <%= render @to_do %>
-  </tbody>
-</table>
-
+  </div>
+  <div class="col-md-4"><h1 class="text-center">Doing</h1>
+    <%= render @in_progress %>
+  </div>
+  <div class="col-md-4"><h1 class="text-center">Done</h1>
+    <%= render @completed %>
+  </div>
+</div>
 <br>
-
-<h1>In Progress</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-     <%= render @in_progress %>
-  </tbody>
-</table>
-
-<br>
-
-<h1>Completed</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-<%= render @completed %>
-  </tbody>
-</table>
-
 <%= link_to 'New Task', new_task_path %>
