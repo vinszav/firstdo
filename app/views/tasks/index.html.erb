@@ -12,16 +12,7 @@
   </thead>
 
   <tbody>
-    <% @to_do.each do |task| %>
-      <tr>
-        <td><%= task.content %></td>
-        <td><%= task.state %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Mark as In Progress", change_task_path(task, state: "in_progress"), method: :put %></td>
-      </tr>
-    <% end %>
+    <%= render @to_do %>
   </tbody>
 </table>
 
@@ -39,17 +30,7 @@
   </thead>
 
   <tbody>
-    <% @in_progress.each do |task| %>
-      <tr>
-        <td><%= task.content %></td>
-        <td><%= task.state %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Mark as To Do", change_task_path(task, state: "to_do"), method: :put %></td>
-        <td><%= link_to "Mark as Completed", change_task_path(task, state: "completed"), method: :put %></td>
-      </tr>
-    <% end %>
+     <%= render @in_progress %>
   </tbody>
 </table>
 
@@ -67,16 +48,7 @@
   </thead>
 
   <tbody>
-    <% @completed.each do |task| %>
-      <tr>
-        <td><%= task.content %></td>
-        <td><%= task.state %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Mark as In Progress", change_task_path(task, state: "in_progress"), method: :put %></td>
-      </tr>
-    <% end %>
+<%= render @completed %>
   </tbody>
 </table>
 
