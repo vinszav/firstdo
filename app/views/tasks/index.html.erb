@@ -1,4 +1,8 @@
 
+<%= link_to 'New Task', new_task_path, class: "btn btn-lg btn-primary" %>
+<br>
+<br>
+<br>
 <div class="row">
   <div class="col-md-4"><h1 class="text-center">To Do</h1>
     <%= render @to_do %>
@@ -10,5 +14,5 @@
     <%= render @completed %>
   </div>
 </div>
-<br>
-<%= link_to 'New Task', new_task_path %>
+
+
